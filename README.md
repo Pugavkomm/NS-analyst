@@ -8,6 +8,8 @@
 
 # NS analyst
 
+## Install requirements
+
 1. ```python3 -m venv env```
 1. ```source env/bin/activate```
 1. ``` pip3 install -r requirements.txt ```
@@ -16,8 +18,9 @@
 
 В папке `scripts` находится скрипт ```convert_ui_to_py.bash``` для конвертирования файлов из ```*.ui``` в ```*.py```
 
-## Documentation 
-``` ./docs/```
+## Documentation
+
+```./docs/```
 
 ``` make html ```
 
@@ -62,4 +65,3 @@ tk==0.1.0
 urllib3==1.26.7
 
 ```
-
