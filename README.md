@@ -7,18 +7,18 @@
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
 # NS analyst
-```python3 -m venv env```
 
-``` pip3 install -r requirements.txt ```
+1. ```python3 -m venv env```
+1. ```source env/bin/activate```
+1.``` pip3 install -r requirements.txt ```
 
 ## Scripts
 
 В папке `scripts` находится скрипт ```convert_ui_to_py.bash``` для конвертирования файлов из ```*.ui``` в ```*.py```
 
-
 ## Requirements
 
-```
+``` python
 cycler==0.10.0
 Jinja2==3.0.2
 kiwisolver==1.3.2
@@ -36,3 +36,4 @@ QtPy==1.11.2
 six==1.16.0
 tk==0.1.0
 ```
+
