@@ -153,7 +153,7 @@ class Model:
         T = 2 * np.pi / w_perturb
         # .задает условие на количество итераций, чтобы снимать значение через T
         k = int(T / h)
-        for i in range(self.__period_fixed_points * k):
+        if self.__period_fixed_points == 0:
             k0 = h * self.fx(vy, vz, t)
             l0 = h * self.fy(vy, vz, t)
             k1 = h * self.fx(vy + k0 / 2, vz + l0 / 2, t + h / 2)
@@ -165,6 +165,19 @@ class Model:
             vy += (k0 + 2 * k1 + 2 * k2 + k3) / 6
             vz + (l0 + 2 * l1 + 2 * l2 + l3) / 6
             t += h
+        else:
+            for i in range(self.__period_fixed_points * k):
+                k0 = h * self.fx(vy, vz, t)
+                l0 = h * self.fy(vy, vz, t)
+                k1 = h * self.fx(vy + k0 / 2, vz + l0 / 2, t + h / 2)
+                l1 = h * self.fy(vy + k0 / 2, vz + l0 / 2, t + h / 2)
+                k2 = h * self.fx(vy + k1 / 2, vz + l1 / 2, t + h / 2)
+                l2 = h * self.fy(vy + k1 / 2, vz + l1 / 2, t + h / 2)
+                k3 = h * self.fx(vy + k2, vz + l2, t)
+                l3 = h * self.fy(vy + k2, vz + l2, t)
+                vy += (k0 + 2 * k1 + 2 * k2 + k3) / 6
+                vz + (l0 + 2 * l1 + 2 * l2 + l3) / 6
+                t += h
         return [(k0 + 2 * k1 + 2 * k2 + k3) / 6, (l0 + 2 * l1 + 2 * l2 + l3) / 6]
 
     def for_diff_fixed_point(self, x):
@@ -178,7 +191,7 @@ class Model:
         T = 2 * np.pi / w_perturb
         # задает условие на количество итераций, чтобы снимать значение через T
         k = int(T / h)
-        for i in range(self.__period_fixed_points * k):
+        if self.__period_fixed_points == 0:
             k0 = h * self.fx(vy, vz, t)
             l0 = h * self.fy(vy, vz, t)
             k1 = h * self.fx(vy + k0 / 2, vz + l0 / 2, t + h / 2)
@@ -190,6 +203,19 @@ class Model:
             vy += (k0 + 2 * k1 + 2 * k2 + k3) / 6
             vz += (l0 + 2 * l1 + 2 * l2 + l3) / 6
             t += h
+        else:
+            for i in range(self.__period_fixed_points * k):
+                k0 = h * self.fx(vy, vz, t)
+                l0 = h * self.fy(vy, vz, t)
+                k1 = h * self.fx(vy + k0 / 2, vz + l0 / 2, t + h / 2)
+                l1 = h * self.fy(vy + k0 / 2, vz + l0 / 2, t + h / 2)
+                k2 = h * self.fx(vy + k1 / 2, vz + l1 / 2, t + h / 2)
+                l2 = h * self.fy(vy + k1 / 2, vz + l1 / 2, t + h / 2)
+                k3 = h * self.fx(vy + k2, vz + l2, t)
+                l3 = h * self.fy(vy + k2, vz + l2, t)
+                vy += (k0 + 2 * k1 + 2 * k2 + k3) / 6
+                vz += (l0 + 2 * l1 + 2 * l2 + l3) / 6
+                t += h
         return [vy, vz]
 
     # метод find_fixed_points используется для поиска неподвижной точки или периодической точки
@@ -208,7 +234,7 @@ class Model:
         test = 0
         if len(self.__x_fixed_p) > 0:
             for i in range(len(self.__x_fixed_p)):
-                if abs(self.__x_fixed_p[i] - fixed[0]) < 1e-3 and abs(self.__y_fixed_p[i] - fixed[1]) < 1e-3:
+                if abs(self.__x_fixed_p[i] - fixed[0]) < 1e-4 and abs(self.__y_fixed_p[i] - fixed[1]) < 1e-4:
                     test = 1
                     break
         if test == 0:
@@ -217,7 +243,7 @@ class Model:
             self.__period_fix.append(period)
 
     # нахождение всех периодических точек периода period
-    def find_fixed_points_p(self, period, step=.01):
+    def find_fixed_points_p(self, period, step=.001):
         # h - шаг поиска
         self.__period_fixed_points = period
         step_x = int(
@@ -233,8 +259,8 @@ class Model:
                 test = 0
                 if len(self.__x_fixed_p) != 0:
                     for k in range(len(self.__x_fixed_p)):
-                        if (- 1e-8 < abs(self.__x_fixed_p[k] - fixed[0]) < 1e8
-                                and - 1e-8 < abs(self.__y_fixed_p[k] - fixed[1]) < 1e-8):
+                        if (- 1e-10 < abs(self.__x_fixed_p[k] - fixed[0]) < 1e8
+                                and - 1e-10 < abs(self.__y_fixed_p[k] - fixed[1]) < 1e-8):
                             test = 1
                             break
                 if test == 0:
@@ -265,9 +291,10 @@ class Model:
             self.__save_mult.append(mult)
 
             if type(mult[0]) != np.complex128:
-                self.__sadle_number.append(i)
-                self.__k_sadle1.append(eq[1][0][1] / eq[1][0][0])
-                self.__k_sadle2.append(eq[1][1][0] / eq[1][1][1])
+                if( (abs(mult[0]) > 1 and abs(mult[1]) < 1) or (abs(mult[0]) < 1 and abs(mult[1]) > 1)):
+                    self.__sadle_number.append(i)
+                    self.__k_sadle1.append(eq[1][0][1] / eq[1][0][0])
+                    self.__k_sadle2.append(eq[1][1][0] / eq[1][1][1])
 
     def display_mult(self):
         step = len(self.__x_fixed_p)

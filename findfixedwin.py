@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
-
+# Form implementation generated from reading ui file 'find_mult.ui'
+#
+# Created by: PyQt5 UI code generator 5.12
+#
+# WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -241,7 +245,7 @@ class Ui_findmultWin(object):
 "font: 11pt \"Noto Serif CJK JP\";\n"
 "\n"
 "")
-        self.spinBox.setMinimum(1)
+        self.spinBox.setMinimum(0)
         self.spinBox.setObjectName("spinBox")
         self.horizontalLayout_3.addWidget(self.spinBox)
         self.verticalLayout.addLayout(self.horizontalLayout_3)

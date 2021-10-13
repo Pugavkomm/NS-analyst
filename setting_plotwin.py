@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+# Form implementation generated from reading ui file 'settings_plot.ui'
+#
+# Created by: PyQt5 UI code generator 5.12
+#
+# WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -16,7 +21,7 @@ class Ui_settings_plot_window(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(238, 238, 236))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -40,10 +45,10 @@ class Ui_settings_plot_window(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(238, 238, 236))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -61,7 +66,7 @@ class Ui_settings_plot_window(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(238, 238, 236))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -85,10 +90,10 @@ class Ui_settings_plot_window(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(238, 238, 236))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -106,7 +111,7 @@ class Ui_settings_plot_window(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(238, 238, 236))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -130,10 +135,10 @@ class Ui_settings_plot_window(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(238, 238, 236))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(238, 238, 236))
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -150,25 +155,38 @@ class Ui_settings_plot_window(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
         settings_plot_window.setPalette(palette)
         settings_plot_window.setStyleSheet("color: black;\n"
-"    font-family: \'Roboto Slab\', serif;")
+"    font-family: ;\n"
+"font: 11pt \"Noto Serif CJK JP\";\n"
+"background-color: rgba(255, 255, 255, 85);")
         settings_plot_window.setLocale(QtCore.QLocale(QtCore.QLocale.C, QtCore.QLocale.AnyCountry))
         self.centralwidget = QtWidgets.QWidget(settings_plot_window)
         self.centralwidget.setObjectName("centralwidget")
         self.okButton = QtWidgets.QPushButton(self.centralwidget)
         self.okButton.setGeometry(QtCore.QRect(150, 500, 111, 41))
-        self.okButton.setStyleSheet("float: flat;\n"
+        self.okButton.setStyleSheet("QPushButton {\n"
+"float: right;\n"
 "margin-rigth: 3%;\n"
 "    margin-top: 5px;\n"
-"    \n"
+"    background-shadow: 1px;\n"
 " border: 1px rgba(114, 147, 182, 1);\n"
 "    padding: 5px 9px;\n"
 "    font-size: 1.2em;\n"
 "    background-color: rgba(114, 147, 182, 1);\n"
-"    text-shadow: #454545 0 0 2px;\n"
+"    text-shadow: #454545 0 0 3px;\n"
 "    border-bottom: 4px solid rgba(114, 147, 182, 1);\n"
 "    color: white;\n"
-"    font-family: \'Roboto Slab\', serif;\n"
+"    font-family: ;\n"
+"font: 11pt \"Noto Serif CJK JP\";\n"
 "\n"
+"\n"
+"  border: 1px solid rgba(114, 147, 182, 1);\n"
+"\n"
+"\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"   background-color:rgb(163, 175, 188);\n"
+"}\n"
 "")
         self.okButton.setObjectName("okButton")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -198,6 +216,7 @@ class Ui_settings_plot_window(object):
 "\n"
 "")
         self.xmin.setLocale(QtCore.QLocale(QtCore.QLocale.C, QtCore.QLocale.AnyCountry))
+        self.xmin.setProperty("showGroupSeparator", False)
         self.xmin.setDecimals(10)
         self.xmin.setMinimum(-99999.0)
         self.xmin.setMaximum(99999.99)
@@ -225,6 +244,7 @@ class Ui_settings_plot_window(object):
 "\n"
 "")
         self.xmax.setLocale(QtCore.QLocale(QtCore.QLocale.C, QtCore.QLocale.AnyCountry))
+        self.xmax.setProperty("showGroupSeparator", False)
         self.xmax.setDecimals(10)
         self.xmax.setMinimum(-99999.0)
         self.xmax.setMaximum(99999.99)
@@ -252,6 +272,7 @@ class Ui_settings_plot_window(object):
 "\n"
 "")
         self.ymin.setLocale(QtCore.QLocale(QtCore.QLocale.C, QtCore.QLocale.AnyCountry))
+        self.ymin.setProperty("showGroupSeparator", False)
         self.ymin.setDecimals(10)
         self.ymin.setMinimum(-99999.0)
         self.ymin.setMaximum(99999.99)
@@ -279,6 +300,7 @@ class Ui_settings_plot_window(object):
 "\n"
 "")
         self.ymax.setLocale(QtCore.QLocale(QtCore.QLocale.C, QtCore.QLocale.AnyCountry))
+        self.ymax.setProperty("showGroupSeparator", False)
         self.ymax.setDecimals(10)
         self.ymax.setMinimum(-99999.0)
         self.ymax.setMaximum(99999.99)

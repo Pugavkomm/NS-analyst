@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -542,7 +539,7 @@ class Ui_MainWindow(object):
         self.exit.setObjectName("exit")
         self.infoMenu = QtWidgets.QAction(MainWindow)
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("icons/information.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("information.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.infoMenu.setIcon(icon4)
         self.infoMenu.setObjectName("infoMenu")
         self.settIngIntMenu = QtWidgets.QAction(MainWindow)
@@ -550,8 +547,8 @@ class Ui_MainWindow(object):
         icon5.addPixmap(QtGui.QPixmap("icons/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.settIngIntMenu.setIcon(icon5)
         self.settIngIntMenu.setObjectName("settIngIntMenu")
-        self.action = QtWidgets.QAction(MainWindow)
-        self.action.setObjectName("action")
+        self.saveres = QtWidgets.QAction(MainWindow)
+        self.saveres.setObjectName("saveres")
         self.saveas = QtWidgets.QAction(MainWindow)
         self.saveas.setObjectName("saveas")
         self.selectBottom = QtWidgets.QAction(MainWindow)
@@ -572,7 +569,7 @@ class Ui_MainWindow(object):
         self.input_system.setIcon(icon8)
         self.input_system.setIconVisibleInMenu(True)
         self.input_system.setObjectName("input_system")
-        self.menu.addAction(self.action)
+        self.menu.addAction(self.saveres)
         self.menu.addAction(self.saveas)
         self.File.addSeparator()
         self.File.addAction(self.input_system)
@@ -583,7 +580,6 @@ class Ui_MainWindow(object):
         self.menu_2.addAction(self.settIngIntMenu)
         self.menu_2.addAction(self.setplotMenu)
         self.menu_3.addAction(self.infoMenu)
-        self.menu_3.addAction(self.action_4)
         self.menubar.addAction(self.File.menuAction())
         self.menubar.addAction(self.menu_2.menuAction())
         self.menubar.addAction(self.menu_3.menuAction())
@@ -637,14 +633,16 @@ class Ui_MainWindow(object):
         self.infoMenu.setText(_translate("MainWindow", "о программе"))
         self.settIngIntMenu.setText(_translate("MainWindow", "параметры интегрирования"))
         self.settIngIntMenu.setShortcut(_translate("MainWindow", "Ctrl+I"))
-        self.action.setText(_translate("MainWindow", "сохранить"))
-        self.action.setShortcut(_translate("MainWindow", "Ctrl+S"))
-        self.saveas.setText(_translate("MainWindow", "сохранить как..."))
+        self.saveres.setText(_translate("MainWindow", "сохранить результат"))
+        self.saveres.setShortcut(_translate("MainWindow", "Ctrl+S"))
+        self.saveas.setText(_translate("MainWindow", "сохранить систему"))
         self.saveas.setShortcut(_translate("MainWindow", "Ctrl+Shift+S"))
         self.selectBottom.setText(_translate("MainWindow", "выбрать систему"))
+        self.selectBottom.setShortcut(_translate("MainWindow", "Ctrl+E"))
         self.setplotMenu.setText(_translate("MainWindow", "параметры графика"))
         self.setplotMenu.setShortcut(_translate("MainWindow", "Ctrl+P"))
         self.action_4.setText(_translate("MainWindow", "метод интегрирования"))
         self.input_system.setText(_translate("MainWindow", "задать систему"))
+        self.input_system.setShortcut(_translate("MainWindow", "Ctrl+Shift+I"))
 
 

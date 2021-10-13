@@ -1,4 +1,3 @@
-#version 0.0.1 alpha
 import sys  # sys нужен для передачи argv в QApplication
 import time
 import os
@@ -90,8 +89,11 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow, info.Ui_helpWindow
         self.koefButton.setStatusTip('отобразить, если есть')
         self.pushplotsystem.setStatusTip('открыть окно графика')
         self.input_system.setStatusTip('ввести систему с клавиатуры')
+        self.saveas.setStatusTip('сохранить систему')
+        self.saveres.setStatusTip('сохранить результаты')
         #self.inputBotton.clicked.connect(self.open_input_system)
         # self.plotBotton.clicked.connect(self.multiP)
+
         self.plotBotton.clicked.connect(self.display_plot)
         self.findfixedButton.clicked.connect(self.display_find_fixed)
         self.findmultButton.clicked.connect(self.find_mult_method)
@@ -99,14 +101,58 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow, info.Ui_helpWindow
         self.koefButton.clicked.connect(self.display_sadle_koef)
         self.pushplotsystem.clicked.connect(self.display_plot_system)
 
+
         self.input_system.triggered.connect(self.open_input_system)
         self.infoMenu.triggered.connect(self.open_info_program)
         self.setplotMenu.triggered.connect(self.display_plot_set)
         self.exit.triggered.connect(qApp.quit)
+        self.saveas.triggered.connect(self.saveassystem )
+        self.saveres.triggered.connect(self.saveresult)
+        self.selectBottom.triggered.connect(self.opensystem)
         # self.settIngIntMenu.triggered.connect(self.input_settings_integrate)
         self.settIngIntMenu.triggered.connect(self.open_setting_integrate)
         menubar = self.menuBar()
 
+    def opensystem(self):
+        name = str(QtWidgets.QFileDialog.getOpenFileName(self)[0])
+        if  name != '':
+            file = open(name)
+        # line = file.readline()
+            self.textx = file.readline()
+            self.texty = file.readline()
+            self.wp = float(file.readline())
+            file.close()
+            self.model.get_input_system(self.textx, self.texty, self.wp)
+            self.indicator_input_system = 1
+            self.system_and_integrate_display()
+        #print(len(textfile))
+ 
+          
+
+    def saveresult(self):
+        name = str(QtWidgets.QFileDialog.getSaveFileName(self, "name_file.txt")[0])
+        if  name != '':
+            textfile = self.display_system.toPlainText() + '\n'
+            textfile += "неподвижные точки:\n"
+            textfile +=  self.text_fixed.toPlainText() + '\n' 
+            textfile += "___________\n мультипликаотры:\n" 
+            textfile += self.text_mult.toPlainText() + '\n'
+            textfile += "___________\n коэффициенты:\n"
+            textfile += self.text_koef_sadle.toPlainText()
+            file = open(name, 'w')
+            file.write(textfile)
+            file.close()
+    def saveassystem(self):
+        if self.indicator_input_system == 0:
+            texterror = 'необходимо ввести систему'
+            self.showDialogerror(texterror)
+        else:
+            name = str(QtWidgets.QFileDialog.getSaveFileName(self)[0])
+            if  name != '':
+                file = open(name, 'w')
+                text = self.textx + '\n' + self.texty + '\n' + str(self.wp) 
+                file.write(text)
+                file.close()
     def display_plot(self):
         if self.indicator_input_system == 0:
             texterror = 'необходимо ввести систему'
@@ -374,7 +420,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow, info.Ui_helpWindow
         self.window = QtWidgets.QMainWindow()
         self.ui = info.Ui_helpWindow()
         self.ui.setupUi(self.window)
-        self.ui.textBrowser.append(self.textinfo)
+        #self.ui.textBrowser.append(self.textinfo)
         self.window.show()
 
     def newtext(self):

@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+# Form implementation generated from reading ui file 'plotwindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.12
+#
+# WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -9,7 +14,9 @@ class Ui_plot_window(object):
         plot_window.setObjectName("plot_window")
         plot_window.resize(956, 602)
         plot_window.setStyleSheet("color: black;\n"
-"    font-family: \'Roboto Slab\', serif;")
+"    font-family: ;\n"
+"font: 11pt \"Noto Serif CJK JP\";\n"
+"background-color: rgba(255, 255, 255, 85);")
         self.centralwidget = QtWidgets.QWidget(plot_window)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)

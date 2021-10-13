@@ -1,0 +1,1 @@
+pyinstaller -w -i "C:\Users\slava\Desktop\source_code\scatter.ico" main.py
