@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>NS analyst</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/label.svg</normaloff>../icons/label.svg</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="7" column="2">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>Find eig value</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Find a few points</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTextBrowser" name="textBrowser_3">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;x` = ...&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;y`= ...&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;plot step = 0.001&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="Plot_system">
+      <property name="text">
+       <string>Plot system</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Text example&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Text example&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Fixed points</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Find point</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QTextBrowser" name="textBrowser_4">
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Something&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionInput_system"/>
+    <addaction name="actionLoad_system"/>
+    <addaction name="actionSave_system"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <widget class="QMenu" name="menuChange_theme">
+     <property name="statusTip">
+      <string extracomment="TEST"/>
+     </property>
+     <property name="title">
+      <string>Change theme</string>
+     </property>
+     <widget class="QMenu" name="menuamber">
+      <property name="title">
+       <string>amber</string>
+      </property>
+      <property name="separatorsCollapsible">
+       <bool>true</bool>
+      </property>
+      <property name="toolTipsVisible">
+       <bool>false</bool>
+      </property>
+      <addaction name="actiondark"/>
+      <addaction name="actionlight"/>
+     </widget>
+     <widget class="QMenu" name="menublue">
+      <property name="title">
+       <string>blue</string>
+      </property>
+      <addaction name="actiondark_2"/>
+      <addaction name="actionlight_2"/>
+     </widget>
+     <widget class="QMenu" name="menucyan">
+      <property name="title">
+       <string>cyan</string>
+      </property>
+      <addaction name="actiondark_3"/>
+      <addaction name="actionlight_3"/>
+     </widget>
+     <widget class="QMenu" name="menulightgreen">
+      <property name="title">
+       <string>lightgreen</string>
+      </property>
+      <addaction name="actiondark_4"/>
+      <addaction name="actionlight_4"/>
+     </widget>
+     <widget class="QMenu" name="menupink">
+      <property name="title">
+       <string>pink</string>
+      </property>
+      <addaction name="actiondark_5"/>
+      <addaction name="actionlight_5"/>
+     </widget>
+     <widget class="QMenu" name="menupurple">
+      <property name="title">
+       <string>purple</string>
+      </property>
+      <addaction name="actiondark_6"/>
+      <addaction name="actionlight_6"/>
+     </widget>
+     <widget class="QMenu" name="menured">
+      <property name="title">
+       <string>red</string>
+      </property>
+      <addaction name="actiondark_7"/>
+      <addaction name="actionlight_7"/>
+     </widget>
+     <widget class="QMenu" name="menuteal">
+      <property name="title">
+       <string>teal</string>
+      </property>
+      <addaction name="actiondark_8"/>
+      <addaction name="actionlight_8"/>
+     </widget>
+     <widget class="QMenu" name="menuyerllow">
+      <property name="title">
+       <string>yellow</string>
+      </property>
+      <addaction name="actiondark_9"/>
+      <addaction name="actionlight_9"/>
+     </widget>
+     <addaction name="menuamber"/>
+     <addaction name="menublue"/>
+     <addaction name="menucyan"/>
+     <addaction name="menulightgreen"/>
+     <addaction name="menupink"/>
+     <addaction name="menupurple"/>
+     <addaction name="menured"/>
+     <addaction name="menuteal"/>
+     <addaction name="menuyerllow"/>
+     <addaction name="separator"/>
+    </widget>
+    <addaction name="menuChange_theme"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionVersion"/>
+    <addaction name="actionDescription"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionInput_system">
+   <property name="text">
+    <string>Input system</string>
+   </property>
+  </action>
+  <action name="actionLoad_system">
+   <property name="text">
+    <string>Load system</string>
+   </property>
+  </action>
+  <action name="actionSave_system">
+   <property name="text">
+    <string>Save system</string>
+   </property>
+  </action>
+  <action name="actionVersion">
+   <property name="text">
+    <string>Version</string>
+   </property>
+  </action>
+  <action name="actionDescription">
+   <property name="text">
+    <string>Description</string>
+   </property>
+  </action>
+  <action name="actiondark">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_2">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_2">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_3">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_3">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_4">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_4">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_5">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_5">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_6">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_6">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_7">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_7">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_8">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_8">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+  <action name="actiondark_9">
+   <property name="text">
+    <string>dark</string>
+   </property>
+  </action>
+  <action name="actionlight_9">
+   <property name="text">
+    <string>light</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
