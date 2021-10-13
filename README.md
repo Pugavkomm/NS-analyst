@@ -6,8 +6,7 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
-# Приложение для анализа, построения динамических систем второго порядка
-
+# NS analyst
 ```python3 -m venv env```
 
 ``` pip3 install -r requirements.txt ```
