@@ -11,6 +11,6 @@
 
 ``` pip3 install -r requirements.txt ```
 
-## Скрипты
+## Scripts
 
 В папке `scripts` находится скрипт ```convert_ui_to_py.bash``` для конвертирования файлов из ```*.ui``` в ```*.py```
