@@ -1,3 +1,6 @@
+    """AI is creating summary for 
+    """
+
 from PyQt5 import QtWidgets
 from frontend import main_window
 from PyQt5.QtWidgets import QInputDialog, qApp
@@ -29,7 +32,16 @@ os.environ["QT_FONT_DPI"] = "96"
 
 
 class App(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
+    """AI is creating summary for App
+
+    Args:
+        QtWidgets ([type]): [description]
+        main_window ([type]): [description]
+    """
+    
     def __init__(self):
+        """AI is creating summary for __init__
+        """
         super().__init__()
         self.ui = main_window.Ui_MainWindow()
         self.ui.setupUi(self)
