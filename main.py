@@ -1,5 +1,5 @@
-    """AI is creating summary for 
-    """
+"""AI is creating summary for 
+"""
 
 from PyQt5 import QtWidgets
 from frontend import main_window
@@ -45,7 +45,34 @@ class App(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
         super().__init__()
         self.ui = main_window.Ui_MainWindow()
         self.ui.setupUi(self)
+        self.InitUI()
+    def InitUI(self):
+        """AI is creating summary for setupUi
+        """
+        self.setupUi(self)
+        #self.statusBar = QStatusBar()
+        #self.setStatusBar(self.statusBar)
+        #self.menuFile.setStatusTip()
+        self.menuFile.setStatusTip("test")
+        self.actionExit.triggered.connect(qApp.quit)
+        self.darkamber.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_amber.xml')))
+        self.lightamber.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_amber.xml')))
+        self.darkblue.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_blue.xml')))
+        self.lightblue.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_blue.xml')))
+        self.darkcyan.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_cyan.xml')))
+        self.lightcyan.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_cyan.xml')))
 
+    def __change_theme(self, number:int):
+        """AI is creating summary for change_theme
+
+        Args:
+            number (int): [description]
+        """
+        with open('config_theme', 'w') as file:
+            file.write(str(number))
+        apply_stylesheet(self, theme=style_sheets[number])
+
+    
         
 def main():
     app = QtWidgets.QApplication(sys.argv)  # new  QApplication

@@ -19,41 +19,42 @@ class Ui_MainWindow(object):
         MainWindow.setMaximumSize(QtCore.QSize(900, 500))
         MainWindow.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("qt_templates/../icons/label.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("qt_templates/../../nonlinear_system_annalist/icons/label.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setWindowOpacity(1.0)
+        MainWindow.setDocumentMode(True)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.gridLayout.addWidget(self.pushButton_3, 7, 2, 1, 1)
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout.addWidget(self.pushButton_2, 3, 2, 1, 1)
-        self.textBrowser_3 = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser_3.setObjectName("textBrowser_3")
-        self.gridLayout.addWidget(self.textBrowser_3, 1, 0, 1, 1)
         self.Plot_system = QtWidgets.QPushButton(self.centralwidget)
         self.Plot_system.setObjectName("Plot_system")
         self.gridLayout.addWidget(self.Plot_system, 7, 0, 1, 1)
-        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.textBrowser.setObjectName("textBrowser")
-        self.gridLayout.addWidget(self.textBrowser, 1, 2, 1, 1)
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.gridLayout.addWidget(self.pushButton_3, 7, 2, 1, 1)
         self.textBrowser_2 = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser_2.setObjectName("textBrowser_2")
         self.gridLayout.addWidget(self.textBrowser_2, 6, 2, 1, 1)
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 2, 1, 1)
+        self.textBrowser_3 = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser_3.setObjectName("textBrowser_3")
+        self.gridLayout.addWidget(self.textBrowser_3, 1, 0, 1, 1)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setObjectName("pushButton")
         self.gridLayout.addWidget(self.pushButton, 2, 2, 1, 1)
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.gridLayout.addWidget(self.pushButton_2, 3, 2, 1, 1)
         self.textBrowser_4 = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser_4.setStatusTip("")
         self.textBrowser_4.setObjectName("textBrowser_4")
         self.gridLayout.addWidget(self.textBrowser_4, 6, 0, 1, 1)
+        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser.setObjectName("textBrowser")
+        self.gridLayout.addWidget(self.textBrowser, 1, 2, 1, 1)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 2, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 900, 31))
@@ -101,18 +102,18 @@ class Ui_MainWindow(object):
         self.actionVersion.setObjectName("actionVersion")
         self.actionDescription = QtWidgets.QAction(MainWindow)
         self.actionDescription.setObjectName("actionDescription")
-        self.actiondark = QtWidgets.QAction(MainWindow)
-        self.actiondark.setObjectName("actiondark")
-        self.actionlight = QtWidgets.QAction(MainWindow)
-        self.actionlight.setObjectName("actionlight")
-        self.actiondark_2 = QtWidgets.QAction(MainWindow)
-        self.actiondark_2.setObjectName("actiondark_2")
-        self.actionlight_2 = QtWidgets.QAction(MainWindow)
-        self.actionlight_2.setObjectName("actionlight_2")
-        self.actiondark_3 = QtWidgets.QAction(MainWindow)
-        self.actiondark_3.setObjectName("actiondark_3")
-        self.actionlight_3 = QtWidgets.QAction(MainWindow)
-        self.actionlight_3.setObjectName("actionlight_3")
+        self.darkamber = QtWidgets.QAction(MainWindow)
+        self.darkamber.setObjectName("darkamber")
+        self.lightamber = QtWidgets.QAction(MainWindow)
+        self.lightamber.setObjectName("lightamber")
+        self.darkblue = QtWidgets.QAction(MainWindow)
+        self.darkblue.setObjectName("darkblue")
+        self.lightblue = QtWidgets.QAction(MainWindow)
+        self.lightblue.setObjectName("lightblue")
+        self.darkcyan = QtWidgets.QAction(MainWindow)
+        self.darkcyan.setObjectName("darkcyan")
+        self.lightcyan = QtWidgets.QAction(MainWindow)
+        self.lightcyan.setObjectName("lightcyan")
         self.actiondark_4 = QtWidgets.QAction(MainWindow)
         self.actiondark_4.setObjectName("actiondark_4")
         self.actionlight_4 = QtWidgets.QAction(MainWindow)
@@ -137,17 +138,20 @@ class Ui_MainWindow(object):
         self.actiondark_9.setObjectName("actiondark_9")
         self.actionlight_9 = QtWidgets.QAction(MainWindow)
         self.actionlight_9.setObjectName("actionlight_9")
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionInput_system)
         self.menuFile.addAction(self.actionLoad_system)
         self.menuFile.addAction(self.actionSave_system)
         self.menuFile.addSeparator()
-        self.menuamber.addAction(self.actiondark)
-        self.menuamber.addAction(self.actionlight)
-        self.menublue.addAction(self.actiondark_2)
-        self.menublue.addAction(self.actionlight_2)
-        self.menucyan.addAction(self.actiondark_3)
-        self.menucyan.addAction(self.actionlight_3)
+        self.menuFile.addAction(self.actionExit)
+        self.menuamber.addAction(self.darkamber)
+        self.menuamber.addAction(self.lightamber)
+        self.menublue.addAction(self.darkblue)
+        self.menublue.addAction(self.lightblue)
+        self.menucyan.addAction(self.darkcyan)
+        self.menucyan.addAction(self.lightcyan)
         self.menulightgreen.addAction(self.actiondark_4)
         self.menulightgreen.addAction(self.actionlight_4)
         self.menupink.addAction(self.actiondark_5)
@@ -184,8 +188,14 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "NS analyst"))
+        self.Plot_system.setText(_translate("MainWindow", "Plot system"))
         self.pushButton_3.setText(_translate("MainWindow", "Find eig value"))
-        self.pushButton_2.setText(_translate("MainWindow", "Find a few points"))
+        self.textBrowser_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Text example</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.textBrowser_3.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -195,27 +205,21 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">plot step = 0.001</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.Plot_system.setText(_translate("MainWindow", "Plot system"))
-        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Text example</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.textBrowser_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Text example</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-        self.label.setText(_translate("MainWindow", "Fixed points"))
         self.pushButton.setText(_translate("MainWindow", "Find point"))
+        self.pushButton_2.setText(_translate("MainWindow", "Find a few points"))
         self.textBrowser_4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Noto Sans\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Something</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Text example</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+        self.label.setText(_translate("MainWindow", "Fixed points"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuSettings.setTitle(_translate("MainWindow", "Settings"))
         self.menuChange_theme.setTitle(_translate("MainWindow", "Change theme"))
@@ -234,12 +238,12 @@ class Ui_MainWindow(object):
         self.actionSave_system.setText(_translate("MainWindow", "Save system"))
         self.actionVersion.setText(_translate("MainWindow", "Version"))
         self.actionDescription.setText(_translate("MainWindow", "Description"))
-        self.actiondark.setText(_translate("MainWindow", "dark"))
-        self.actionlight.setText(_translate("MainWindow", "light"))
-        self.actiondark_2.setText(_translate("MainWindow", "dark"))
-        self.actionlight_2.setText(_translate("MainWindow", "light"))
-        self.actiondark_3.setText(_translate("MainWindow", "dark"))
-        self.actionlight_3.setText(_translate("MainWindow", "light"))
+        self.darkamber.setText(_translate("MainWindow", "dark"))
+        self.lightamber.setText(_translate("MainWindow", "light"))
+        self.darkblue.setText(_translate("MainWindow", "dark"))
+        self.lightblue.setText(_translate("MainWindow", "light"))
+        self.darkcyan.setText(_translate("MainWindow", "dark"))
+        self.lightcyan.setText(_translate("MainWindow", "light"))
         self.actiondark_4.setText(_translate("MainWindow", "dark"))
         self.actionlight_4.setText(_translate("MainWindow", "light"))
         self.actiondark_5.setText(_translate("MainWindow", "dark"))
@@ -252,6 +256,7 @@ class Ui_MainWindow(object):
         self.actionlight_8.setText(_translate("MainWindow", "light"))
         self.actiondark_9.setText(_translate("MainWindow", "dark"))
         self.actionlight_9.setText(_translate("MainWindow", "light"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
 
 
 if __name__ == "__main__":

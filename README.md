@@ -16,7 +16,7 @@
 
 ## Scripts
 
-В папке `scripts` находится скрипт ```convert_ui_to_py.bash``` для конвертирования файлов из ```*.ui``` в ```*.py```
+```convert_ui_to_py.bash``` convert from  ```*.ui``` to ```*.py```. It's more faster that parsing xml files. 
 
 ## Documentation
 
