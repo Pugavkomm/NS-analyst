@@ -4,6 +4,7 @@
 from PyQt5 import QtWidgets
 from frontend import main_window
 from PyQt5.QtWidgets import QInputDialog, qApp
+from frontend import input_system
 from PyQt5.QtWidgets import*
 import sys, os
 from qt_material import apply_stylesheet
@@ -31,7 +32,7 @@ os.environ["QT_FONT_DPI"] = "96"
 
 
 
-class App(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
+class App(QtWidgets.QMainWindow, main_window.Ui_MainWindow, input_system.Ui_input_system):
     """AI is creating summary for App
 
     Args:
@@ -54,6 +55,7 @@ class App(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
         #self.setStatusBar(self.statusBar)
         #self.menuFile.setStatusTip()
         self.menuFile.setStatusTip("test")
+
         self.actionExit.triggered.connect(qApp.quit)
         self.darkamber.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_amber.xml')))
         self.lightamber.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_amber.xml')))
@@ -61,6 +63,27 @@ class App(QtWidgets.QMainWindow, main_window.Ui_MainWindow):
         self.lightblue.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_blue.xml')))
         self.darkcyan.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_cyan.xml')))
         self.lightcyan.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_cyan.xml')))
+        self.darklightgreen.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_lightgreen.xml')))
+        self.lightlightgreen.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_lightgreen.xml')))
+        self.darkpink.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_pink.xml')))
+        self.lightping.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_pink.xml')))
+        self.darkpurple.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_purple.xml')))
+        self.lightpurple.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_purple.xml')))
+        self.darkred.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_red.xml')))
+        self.lightred.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_red.xml')))
+        self.darkteal.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_teal.xml')))
+        self.lightteal.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_teal.xml')))
+        self.darkyellow.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_yellow.xml')))
+        self.lightyellow.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_yellow.xml')))
+
+        self.actionInput_system.triggered.connect(self.__input_system)
+
+    def __input_system(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = input_system.Ui_input_system()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
 
     def __change_theme(self, number:int):
         """AI is creating summary for change_theme

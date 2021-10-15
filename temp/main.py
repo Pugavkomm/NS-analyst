@@ -14,7 +14,7 @@ import design
 import info
 import wid_info
 import Map_wd
-import info_dialog
+import info_dialogin
 #from plyer import notification
 from PyQt5.QtWidgets import QInputDialog, qApp
 import threading

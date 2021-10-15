@@ -193,43 +193,43 @@ p, li { white-space: pre-wrap; }
       <property name="title">
        <string>lightgreen</string>
       </property>
-      <addaction name="actiondark_4"/>
-      <addaction name="actionlight_4"/>
+      <addaction name="darklightgreen"/>
+      <addaction name="lightlightgreen"/>
      </widget>
      <widget class="QMenu" name="menupink">
       <property name="title">
        <string>pink</string>
       </property>
-      <addaction name="actiondark_5"/>
-      <addaction name="actionlight_5"/>
+      <addaction name="darkpink"/>
+      <addaction name="lightping"/>
      </widget>
      <widget class="QMenu" name="menupurple">
       <property name="title">
        <string>purple</string>
       </property>
-      <addaction name="actiondark_6"/>
-      <addaction name="actionlight_6"/>
+      <addaction name="darkpurple"/>
+      <addaction name="lightpurple"/>
      </widget>
      <widget class="QMenu" name="menured">
       <property name="title">
        <string>red</string>
       </property>
-      <addaction name="actiondark_7"/>
-      <addaction name="actionlight_7"/>
+      <addaction name="darkred"/>
+      <addaction name="lightred"/>
      </widget>
      <widget class="QMenu" name="menuteal">
       <property name="title">
        <string>teal</string>
       </property>
-      <addaction name="actiondark_8"/>
-      <addaction name="actionlight_8"/>
+      <addaction name="darkteal"/>
+      <addaction name="lightteal"/>
      </widget>
-     <widget class="QMenu" name="menuyerllow">
+     <widget class="QMenu" name="menuyellow">
       <property name="title">
        <string>yellow</string>
       </property>
-      <addaction name="actiondark_9"/>
-      <addaction name="actionlight_9"/>
+      <addaction name="darkyellow"/>
+      <addaction name="lightyellow"/>
      </widget>
      <addaction name="menuamber"/>
      <addaction name="menublue"/>
@@ -239,7 +239,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="menupurple"/>
      <addaction name="menured"/>
      <addaction name="menuteal"/>
-     <addaction name="menuyerllow"/>
+     <addaction name="menuyellow"/>
      <addaction name="separator"/>
     </widget>
     <addaction name="menuChange_theme"/>
@@ -312,62 +312,62 @@ p, li { white-space: pre-wrap; }
     <string>light</string>
    </property>
   </action>
-  <action name="actiondark_4">
+  <action name="darklightgreen">
    <property name="text">
     <string>dark</string>
    </property>
   </action>
-  <action name="actionlight_4">
+  <action name="lightlightgreen">
    <property name="text">
     <string>light</string>
    </property>
   </action>
-  <action name="actiondark_5">
+  <action name="darkpink">
    <property name="text">
     <string>dark</string>
    </property>
   </action>
-  <action name="actionlight_5">
+  <action name="lightping">
    <property name="text">
     <string>light</string>
    </property>
   </action>
-  <action name="actiondark_6">
+  <action name="darkpurple">
    <property name="text">
     <string>dark</string>
    </property>
   </action>
-  <action name="actionlight_6">
+  <action name="lightpurple">
    <property name="text">
     <string>light</string>
    </property>
   </action>
-  <action name="actiondark_7">
+  <action name="darkred">
    <property name="text">
     <string>dark</string>
    </property>
   </action>
-  <action name="actionlight_7">
+  <action name="lightred">
    <property name="text">
     <string>light</string>
    </property>
   </action>
-  <action name="actiondark_8">
+  <action name="darkteal">
    <property name="text">
     <string>dark</string>
    </property>
   </action>
-  <action name="actionlight_8">
+  <action name="lightteal">
    <property name="text">
     <string>light</string>
    </property>
   </action>
-  <action name="actiondark_9">
+  <action name="darkyellow">
    <property name="text">
     <string>dark</string>
    </property>
   </action>
-  <action name="actionlight_9">
+  <action name="lightyellow">
    <property name="text">
     <string>light</string>
    </property>
