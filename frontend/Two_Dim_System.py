@@ -28,7 +28,6 @@ style_sheets = ['dark_amber.xml',
                 'light_yellow.xml']
 
 
-
 class Two_Dim_system(QtWidgets.QMainWindow, main_window.Ui_MainWindow, input_system.Ui_input_system):
     """AI is creating summary for App
 
@@ -36,7 +35,7 @@ class Two_Dim_system(QtWidgets.QMainWindow, main_window.Ui_MainWindow, input_sys
         QtWidgets ([type]): [description]
         main_window ([type]): [description]
     """
-    
+
     def __init__(self):
         """AI is creating summary for __init__
         """
@@ -44,15 +43,15 @@ class Two_Dim_system(QtWidgets.QMainWindow, main_window.Ui_MainWindow, input_sys
         self.ui = main_window.Ui_MainWindow()
         self.ui.setupUi(self)
         self.InitUI()
+
     def InitUI(self):
         """AI is creating summary for setupUi
         """
         self.setupUi(self)
-        #self.statusBar = QStatusBar()
-        #self.setStatusBar(self.statusBar)
-        #self.menuFile.setStatusTip()
-        self.menuFile.setStatusTip("test")
-
+        # self.statusBar = QStatusBar()
+        # self.setStatusBar(self.statusBar)
+        # self.menuFile.setStatusTip()
+        # self.menuFile.setStatusTip("test")
         self.actionExit.triggered.connect(qApp.quit)
         self.darkamber.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_amber.xml')))
         self.lightamber.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_amber.xml')))
@@ -72,9 +71,6 @@ class Two_Dim_system(QtWidgets.QMainWindow, main_window.Ui_MainWindow, input_sys
         self.lightteal.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_teal.xml')))
         self.darkyellow.triggered.connect(lambda: self.__change_theme(style_sheets.index('dark_yellow.xml')))
         self.lightyellow.triggered.connect(lambda: self.__change_theme(style_sheets.index('light_yellow.xml')))
-
-        
-
         self.actionInput_system.triggered.connect(self.__input_system)
 
     def __input_system(self):
@@ -83,8 +79,7 @@ class Two_Dim_system(QtWidgets.QMainWindow, main_window.Ui_MainWindow, input_sys
         self.ui.setupUi(self.window)
         self.window.show()
 
-
-    def __change_theme(self, number:int):
+    def __change_theme(self, number: int):
         """AI is creating summary for change_theme
 
         Args:
@@ -94,6 +89,3 @@ class Two_Dim_system(QtWidgets.QMainWindow, main_window.Ui_MainWindow, input_sys
             file.write(str(number))
         apply_stylesheet(self, theme=style_sheets[number])
         print('TEST')
-
-    
-        

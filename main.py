@@ -1,14 +1,14 @@
 from PyQt5 import QtWidgets
-from frontend import main_window, two_D_plot_window
+from frontend import main_window, Two_Dim_System
 from PyQt5.QtWidgets import QInputDialog, qApp
 from frontend import input_system
-from PyQt5.QtWidgets import*
+from PyQt5.QtWidgets import *
 import sys, os
 from qt_material import apply_stylesheet
 from frontend import start_window
 from qt_material import apply_stylesheet
 
-#from frontend import two_D_plot_window
+# from frontend import two_D_plot_window
 style_sheets = ['dark_amber.xml',
                 'dark_blue.xml',
                 'dark_cyan.xml',
@@ -38,14 +38,16 @@ class App(QtWidgets.QMainWindow, input_system.Ui_input_system, start_window.Ui_N
         self.ui = start_window.Ui_NS_startup()
         self.ui.setupUi(self)
         self.InitUi()
+
     def InitUi(self):
         self.ui.twoDsystem.clicked.connect(self.two_D_system_start)
-    
+
     def two_D_system_start(self):
-        #self.window = QtWidgets.QMainWindow()
-        self.ui = two_D_plot_window.Two_Dim_system()
+        # self.window = QtWidgets.QMainWindow()
+        self.ui = Two_Dim_System.Two_Dim_system()
         self.ui.show()
-        
+
+
 def main():
     app = QtWidgets.QApplication(sys.argv)  # new  QApplication
     theme_number = 0
@@ -55,15 +57,14 @@ def main():
     with open('config_theme') as file:
         theme_number = int(file.readline()[0])
         if theme_number > len(style_sheets):
-            theme_number = 0 
-        
+            theme_number = 0
+
     apply_stylesheet(app, theme=style_sheets[theme_number])
 
-    
     window = App()  # Create object ExampleApp
     window.show()  # Показываем окно
     app.exec_()  # и запускаем приложение
 
 
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
-    main()  # то запускаем функцию main()   
+    main()  # то запускаем функцию main()
