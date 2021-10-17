@@ -32,8 +32,8 @@
   <widget class="QPushButton" name="threeDsystem">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>140</y>
+     <x>180</x>
+     <y>60</y>
      <width>161</width>
      <height>81</height>
     </rect>
@@ -48,8 +48,8 @@
   <widget class="QPushButton" name="NDsystem">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>60</y>
+     <x>100</x>
+     <y>140</y>
      <width>161</width>
      <height>81</height>
     </rect>
